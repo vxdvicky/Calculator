@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>calculator</title>
+       <link rel="stylesheet" href="calculate.css">
+        </head>
+        <body><script>
+            function beta(x)
+            {
+                document.getElementById("a").value +=x;
+            }
+            function clr()
+            {
+                document.getElementById("a").value ="";
+            }
+            function solution()
+            {
+                var t=document.getElementById("a").value;
+                var v=eval(t);
+                document.getElementById("a").value=v;
+            }
+
+
+        </script>
+        <div  class="a1"><table>
+           <div class="G2"> <tr>
+                <th > <div class="display-row"><input type="text" placeholder="0" id="a"> <input type="button" value="c" id="btn" onclick="clr()"></div></th>
+            </tr>
+            <tr><th >
+                <input type="button" id="btn" value="7" onclick="beta(7)">
+                <input type="button" id="btn" value="8" onclick="beta(8)"> 
+                <input type="button" id="btn" value="9" onclick="beta(9)">
+                <input type="button" id="btn" value="/" onclick="beta('/')"> 
+            </th> </tr></div>
+            <div  class="a2">
+            <tr><th><input type="button" id="btn" value="4" onclick="beta(4)">
+                <input type="button" id="btn" value="5" onclick="beta(5)">
+                <input type="button" id="btn" value="6" onclick="beta(6)">
+                <input type="button" id="btn" value="-"  onclick="beta('-')">
+                 </th></tr></div>
+                 <div  class="a3"> <tr>
+                <th> 
+                    <input type="button" id="btn" value="1" onclick="beta(1)">
+                    <input type="button" id="btn" value="2" onclick="beta(2)">
+                    <input type="button" id="btn" value="3" onclick="beta(3)">
+                    <input type="button" id="btn" value="+" onclick="beta('+')">
+                </th>
+            </tr></div>
+            <div  class="a4"><tr><th>
+                <input type="button" id="btn" value="."  onclick="beta('.')">
+                <input type="button" id="btn" value="0" onclick="beta(0)">
+                <input type="button" id="btn" value="="  onclick="solution()">
+                <input type="button" id="btn" value="*"  onclick="beta('*')">
+            </th></tr></div>
+      
+
+
+        </table>  </div>
+         </body>
+        </html>
